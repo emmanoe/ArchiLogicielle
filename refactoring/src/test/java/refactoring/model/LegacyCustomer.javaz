@@ -1,12 +1,13 @@
-package model;
+package java.model;
 import java.util.*;
+import java.model;
 
-public class Customer
+public class LegacyCustomer
 {
     private final String _name;
 	private final Vector _rentals = new Vector();
 
-	public Customer(final String name) {
+	public LegacyCustomer(final String name) {
 		_name = name;
 	}
 
