@@ -13,7 +13,19 @@ public class Children implements PriceAlgorithme
 			computedPrice += (dayRented - MAX_DAYS_FOR_CHILDREN_RENTS) * PENALTY;
 		return computedPrice;
     }
-    
+
+    @Override
+    public PriceAlgorithme clone()
+    {
+        Object o = null;
+        try {
+            o = super.clone();
+        } catch (CloneNotSupportedException cnse) {
+            cnse.printStackTrace(System.err);
+        }
+        return (PriceAlgorithme)o;
+    }
+
     public int getFrequentRenterPoints(int daysRented)
     {
         return 0;

@@ -58,17 +58,17 @@ public class Customer
 			switch (MoviesCategories.Categories.values()[each.getMovie().getPriceCode()]) 
 			{
 				case REGULAR:
-					thisAmount = getPrice(REGULAR_PRICE, MAX_DAYS_FOR_REGULAR_RENTS, each.getDaysRented(), PENALTY);
+					//thisAmount = getPrice(REGULAR_PRICE, MAX_DAYS_FOR_REGULAR_RENTS, each.getDaysRented(), PENALTY);
 					break;
 				case NEW_RELEASE:
-					thisAmount += each.getDaysRented()*NEW_RELEASE_PRICE;
+					//thisAmount += each.getDaysRented()*NEW_RELEASE_PRICE;
 					break;
 				case CHILDRENS:
-					thisAmount = getPrice(CHILDREN_PRICE, MAX_DAYS_FOR_CHILDREN_RENTS, each.getDaysRented(), PENALTY);
+					//each.getMovie().getPriceCode2().getPrice(each.getDaysRented()+1);
 					break;
 			}
 			
-			frequentRenterPoints = getFrequentRenterPoints(each.getMovie().getPriceCode(), each.getDaysRented());
+			//frequentRenterPoints = getFrequentRenterPoints(each.getMovie().getPriceCode(), each.getDaysRented());
 
 			sBuffer.append("\t" + each.getMovie().getTitle()+"\t"+ String.valueOf(thisAmount) +" \n");
 			getTotalPrice(totalAmount, thisAmount);

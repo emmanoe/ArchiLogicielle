@@ -1,13 +1,13 @@
-package java.model;
+package model;
 import java.util.*;
-import java.model;
 
-public class LegacyCustomer
+public class Customer
 {
     private final String _name;
 	private final Vector _rentals = new Vector();
 
-	public LegacyCustomer(final String name) {
+	public Customer(final String name) 
+	{
 		_name = name;
 	}
 
@@ -16,7 +16,8 @@ public class LegacyCustomer
 		_rentals.addElement(rental);
 	}
 
-	public String getName() {
+	public String getName() 
+	{
 		return _name;
 	}
 
@@ -25,7 +26,8 @@ public class LegacyCustomer
 		return 0.0;
 	}
 
-	public String statement() {
+	public String statement() 
+	{
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
 		final Enumeration rentals = _rentals.elements();
